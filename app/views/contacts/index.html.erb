@@ -1,0 +1,33 @@
+<h1>Contacts</h1>
+
+<table class='table'>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Number</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<% @contacts.each do |contact| %>
+			<tr>
+				<td>
+					<%= contact.name %>
+				</td>
+				<td>
+					<%= contact.number %>
+				</td>
+				<td>
+					<%= link_to 'Details', contact_path(contact), method: :get %>
+				</td>
+				<td>
+					<%= link_to 'Edit', edit_contact_path(contact) %>
+				</td>
+				<td>
+					<%= link_to 'Delete', contact_path(contact), method: :delete, data: {confirm: 'Are you sure?'} %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<p><%= link_to 'Add new contact', new_contact_path() %></p>
