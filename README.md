@@ -1,24 +1,9 @@
 # README
+For the application to work, you need rpm, ruby, rails, postgresql, yarn.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start, you need to change the data to enter the database in the file phone_book/config/database.yml
+You need to change the fields to your values 'database', 'username', 'password'.
 
-Things you may want to cover:
+Next, in the root of the project, you need to run 'bundle install' command
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Next, run the command 'rake db:create' and 'rake db:migrate'
